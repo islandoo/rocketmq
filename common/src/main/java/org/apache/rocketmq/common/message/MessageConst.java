@@ -23,6 +23,7 @@ public class MessageConst {
     public static final String PROPERTY_TAGS = "TAGS";
     public static final String PROPERTY_WAIT_STORE_MSG_OK = "WAIT";
     public static final String PROPERTY_DELAY_TIME_LEVEL = "DELAY";
+    public static final String PROPERTY_DELAY_TIME = "DELAY_TIME";
     public static final String PROPERTY_RETRY_TOPIC = "RETRY_TOPIC";
     public static final String PROPERTY_REAL_TOPIC = "REAL_TOPIC";
     public static final String PROPERTY_REAL_QUEUE_ID = "REAL_QID";
@@ -52,7 +53,7 @@ public class MessageConst {
     public static final String PROPERTY_PUSH_REPLY_TIME = "PUSH_REPLY_TIME";
     public static final String PROPERTY_CLUSTER = "CLUSTER";
     public static final String PROPERTY_MESSAGE_TYPE = "MSG_TYPE";
-
+    public static final String PROPERTY_ORIGIN_MSG_ID = "ORIGIN_MSG_ID";
     public static final String KEY_SEPARATOR = " ";
 
     public static final HashSet<String> STRING_HASH_SET = new HashSet<String>();

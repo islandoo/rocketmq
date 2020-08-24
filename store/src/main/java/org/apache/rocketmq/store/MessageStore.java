@@ -18,6 +18,7 @@ package org.apache.rocketmq.store;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
@@ -104,7 +105,7 @@ public interface MessageStore {
      * @return Matched messages.
      */
     GetMessageResult getMessage(final String group, final String topic, final int queueId,
-        final long offset, final int maxMsgNums, final MessageFilter messageFilter);
+                                final long offset, final int maxMsgNums, final MessageFilter messageFilter);
 
     /**
      * Get maximum offset of the topic queue.
@@ -264,7 +265,9 @@ public interface MessageStore {
      * @param end end timestamp.
      */
     QueryMessageResult queryMessage(final String topic, final String key, final int maxNum, final long begin,
-        final long end);
+                                    final long end);
+
+    List<MessageExt> queryMessageLocal(String topic, String key, int maxNum, long begin, long end);
 
     /**
      * Update HA master address.
